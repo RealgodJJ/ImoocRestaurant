@@ -1,4 +1,4 @@
-package mybaidu.admin.example.com.imoocrestaurant.activity;
+package mybaidu.admin.example.com.imoocrestaurant.ui;
 
 import android.content.Intent;
 import android.os.Handler;
