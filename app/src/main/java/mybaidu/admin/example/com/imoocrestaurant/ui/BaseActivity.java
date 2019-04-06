@@ -1,6 +1,6 @@
 package mybaidu.admin.example.com.imoocrestaurant.ui;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
