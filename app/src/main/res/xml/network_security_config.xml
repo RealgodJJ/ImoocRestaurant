@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config><!--Android P（版本27）之后限制了铭文流量的网络请求，非加密的流量秦桧都会被系统禁止掉-->

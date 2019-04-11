@@ -1,6 +1,6 @@
 package mybaidu.admin.example.com.imoocrestaurant.net;
 
-import com.google.gson.Gson;
+import com.google.gson.internal.$Gson$Types;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import org.json.JSONObject;
@@ -11,6 +11,11 @@ import java.lang.reflect.Type;
 import mybaidu.admin.example.com.imoocrestaurant.utils.GsonUtil;
 import okhttp3.Call;
 
+/**
+ * 处理网络回调
+ *
+ * @param <T>
+ */
 public abstract class CommonCallback<T> extends StringCallback {
     private Type type;
     private static final String RESULT_CODE = "resultCode";
@@ -18,19 +23,18 @@ public abstract class CommonCallback<T> extends StringCallback {
     private static final String DATA = "data";
 
     protected CommonCallback() {
-        //
-        Class<? extends CommonCallback> clazz = getClass();
+        type = getSuperclassTypeParameter(getClass());
+    }
+
+    private static Type getSuperclassTypeParameter(Class<?> subclass) {
         //返回直接继承的父类（包含泛型参数）
-        Type genericSuperclass = clazz.getGenericSuperclass();
-
-        if (genericSuperclass instanceof Class) {
-            throw new RuntimeException("Miss type Params");
+        Type superclass = subclass.getGenericSuperclass();
+        if (superclass instanceof Class) {
+            throw new RuntimeException("Missing type parameter.");
         }
-
-        ParameterizedType parameterizedType = (ParameterizedType) genericSuperclass;
-        if (parameterizedType != null) {
-            type = parameterizedType.getActualTypeArguments()[0];
-        }
+        ParameterizedType parameterized = (ParameterizedType) superclass;
+        return $Gson$Types.canonicalize((parameterized != null ?
+                parameterized.getActualTypeArguments() : new Type[0])[0]);
     }
 
     @Override

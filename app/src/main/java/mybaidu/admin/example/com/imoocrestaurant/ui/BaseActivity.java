@@ -1,6 +1,6 @@
 package mybaidu.admin.example.com.imoocrestaurant.ui;
 
-import android.app.Dialog;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.view.View;
 
 import mybaidu.admin.example.com.imoocrestaurant.R;
 
+@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
     private ProgressDialog loadDialog;
 

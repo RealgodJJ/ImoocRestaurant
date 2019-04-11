@@ -3,7 +3,7 @@ package mybaidu.admin.example.com.imoocrestaurant.bean;
 public class User {
     private int id;
     private String password;
-    private String userName;
+    private String username;
     private int icon;
 
     public int getId() {
@@ -22,12 +22,12 @@ public class User {
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getIcon() {

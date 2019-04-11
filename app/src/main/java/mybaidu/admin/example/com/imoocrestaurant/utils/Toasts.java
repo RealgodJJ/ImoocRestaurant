@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 public class Toasts {
 
-    private static android.widget.Toast toast;
+    private static Toast toast;
 
     public static void showToast(String content) {
         toast.setText(content);
@@ -15,7 +15,7 @@ public class Toasts {
 
     @SuppressLint("ShowToast")
     public static void init(Context context) {
-        toast = android.widget.Toast.makeText(context, "", android.widget.Toast.LENGTH_SHORT);
+        toast = Toast.makeText(context, "", android.widget.Toast.LENGTH_SHORT);
 //        Toasts.makeText(context,"", Toasts.LENGTH_SHORT).show();
     }
 }

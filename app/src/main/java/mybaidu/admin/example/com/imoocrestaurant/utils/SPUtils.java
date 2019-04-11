@@ -180,7 +180,7 @@ public class SPUtils {
                     sApplyMethod.invoke(editor);
                     return;
                 }
-            } catch (IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {
+            } catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
             }
             editor.commit();
