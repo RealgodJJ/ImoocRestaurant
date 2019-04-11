@@ -123,8 +123,7 @@ public class LoginActivity extends BaseActivity {
 
     public static void launch(Context context, String username, String password) {
         Intent intent = new Intent(context, LoginActivity.class);
-        //TODO:这句话究竟是什么鬼（害老子调试这么半天）
-//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(KEY_USERNAME, username);
         intent.putExtra(KEY_PASSWORD, password);
         context.startActivity(intent);

@@ -37,7 +37,7 @@ public class UserInfoHolder {
         this.user = user;
         if (user != null) {
             SPUtils.getInstance().put(KEY_USERNAME, user.getUsername());
-//            SPUtils.getInstance().put(KEY_PASSWORD, user.getPassword());
+            SPUtils.getInstance().put(KEY_PASSWORD, user.getPassword());
         }
     }
 }
