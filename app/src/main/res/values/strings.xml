@@ -15,4 +15,7 @@
     <string name="login_success">登录成功</string>
     <string name="password_not_same">两次输入的密码不一致！</string>
     <string name="register_success">注册成功</string>
+    <string name="nullable">nullable</string>
+    <string name="order_dinner">点餐</string>
+    <string name="my_order">我的 订单</string>
 </resources>

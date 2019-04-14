@@ -50,4 +50,8 @@ public class BaseActivity extends AppCompatActivity {
         stopLoadingProgress();
         loadDialog = null;
     }
+
+    protected void toLoginActivity() {
+
+    }
 }

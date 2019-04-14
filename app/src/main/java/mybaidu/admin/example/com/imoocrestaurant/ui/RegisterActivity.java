@@ -27,7 +27,7 @@ public class RegisterActivity extends BaseActivity {
         setUpToolbar();
         setTitle(R.string.register);
         initView();
-        initListener();
+        initEvent();
 
         userBiz = new UserBiz();
     }
@@ -39,7 +39,7 @@ public class RegisterActivity extends BaseActivity {
         btRegister = findViewById(R.id.bt_register);
     }
 
-    private void initListener() {
+    private void initEvent() {
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
