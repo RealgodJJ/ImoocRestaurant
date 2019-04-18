@@ -1,4 +1,4 @@
-package mybaidu.admin.example.com.imoocrestaurant.ui;
+package mybaidu.admin.example.com.imoocrestaurant.ui.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -78,5 +78,11 @@ public class RegisterActivity extends BaseActivity {
                 });
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        userBiz.onDestroy();
     }
 }

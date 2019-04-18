@@ -1,6 +1,5 @@
 package mybaidu.admin.example.com.imoocrestaurant;
 
-import android.annotation.SuppressLint;
 import android.app.Application;
 
 import com.zhy.http.okhttp.OkHttpUtils;

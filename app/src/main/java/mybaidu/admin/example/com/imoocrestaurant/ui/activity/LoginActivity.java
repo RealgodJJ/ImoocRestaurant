@@ -1,4 +1,4 @@
-package mybaidu.admin.example.com.imoocrestaurant.ui;
+package mybaidu.admin.example.com.imoocrestaurant.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -123,9 +123,15 @@ public class LoginActivity extends BaseActivity {
 
     public static void launch(Context context, String username, String password) {
         Intent intent = new Intent(context, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(KEY_USERNAME, username);
         intent.putExtra(KEY_PASSWORD, password);
         context.startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        userBiz.onDestroy();
     }
 }

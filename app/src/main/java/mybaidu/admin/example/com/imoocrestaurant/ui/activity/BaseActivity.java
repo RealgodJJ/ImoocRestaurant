@@ -1,7 +1,8 @@
-package mybaidu.admin.example.com.imoocrestaurant.ui;
+package mybaidu.admin.example.com.imoocrestaurant.ui.activity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +53,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void toLoginActivity() {
-
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

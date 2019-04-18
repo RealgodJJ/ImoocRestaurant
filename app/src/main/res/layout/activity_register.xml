@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F3F5F7"
     android:orientation="vertical"
-    tools:context=".ui.RegisterActivity">
+    tools:context=".ui.activity.RegisterActivity">
 
     <include layout="@layout/common_toolbar" />
 

@@ -17,5 +17,17 @@
     <string name="register_success">注册成功</string>
     <string name="nullable">nullable</string>
     <string name="order_dinner">点餐</string>
-    <string name="my_order">我的 订单</string>
+    <string name="my_order">我的订单</string>
+    <string name="mooc_restaurant">小慕餐厅</string>
+    <string name="description">相关描述</string>
+    <string name="total_cost">共消费：%1$.2f元</string>
+    <string name="no_cost">无消费</string>
+    <string name="order_description">%1$s等%2$d商品</string>
+    <string name="refresh_order_success">更新订单成功~~~</string>
+    <string name="user_not_login">用户未登录</string>
+    <string name="no_more_orders">没有订单了~~</string>
+    <string name="load_orders_success">订单加载成功~</string>
+    <string name="count_0">数量：0</string>
+    <string name="pay_for_dinner">%1$.2f元 立即支付</string>
+    <string name="order">订单</string>
 </resources>

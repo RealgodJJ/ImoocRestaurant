@@ -18,4 +18,8 @@ public class UserBiz {
                 .addParams("username", username).addParams("password", password).build()
                 .execute(userCommonCallback);
     }
+
+    public void onDestroy() {
+        OkHttpUtils.getInstance().cancelTag(this);
+    }
 }

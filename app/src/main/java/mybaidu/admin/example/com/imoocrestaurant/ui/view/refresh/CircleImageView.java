@@ -12,13 +12,13 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.support.v4.view.ViewCompat;
 import android.view.animation.Animation;
-import android.widget.ImageView;
 
 /**
  * Private class created to work around issues with AnimationListeners being
  * called before the animation is actually complete and support shadows on older
  * platforms.
  */
+@SuppressLint("ViewConstructor")
 class CircleImageView extends android.support.v7.widget.AppCompatImageView {
 
     private static final int KEY_SHADOW_COLOR = 0x1E000000;
@@ -51,7 +51,7 @@ class CircleImageView extends android.support.v7.widget.AppCompatImageView {
             ViewCompat.setLayerType(this, ViewCompat.LAYER_TYPE_SOFTWARE, circle.getPaint());
             circle.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset,
                     KEY_SHADOW_COLOR);
-            final int padding = (int) mShadowRadius;
+            final int padding = mShadowRadius;
             // set padding so the inner image sits correctly within the shadow.
             setPadding(padding, padding, padding, padding);
         }
@@ -60,7 +60,8 @@ class CircleImageView extends android.support.v7.widget.AppCompatImageView {
     }
 
     private boolean elevationSupported() {
-        return android.os.Build.VERSION.SDK_INT >= 21;
+        return true;
+//        return android.os.Build.VERSION.SDK_INT >= 21;
     }
 
     @Override
@@ -109,7 +110,7 @@ class CircleImageView extends android.support.v7.widget.AppCompatImageView {
         private Paint mShadowPaint;
         private int mCircleDiameter;
 
-        public OvalShadow(int shadowRadius, int circleDiameter) {
+        private OvalShadow(int shadowRadius, int circleDiameter) {
             super();
             mShadowPaint = new Paint();
             mShadowRadius = shadowRadius;
