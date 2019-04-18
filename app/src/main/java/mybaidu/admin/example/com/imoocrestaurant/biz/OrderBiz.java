@@ -43,7 +43,7 @@ public class OrderBiz {
                 .tag(this).build().execute(commonCallback);
     }
 
-//    public void onDestroy() {
-//        OkHttpUtils.getInstance().cancelTag(this);
-//    }
+    public void onDestroy() {
+        OkHttpUtils.getInstance().cancelTag(this);
+    }
 }

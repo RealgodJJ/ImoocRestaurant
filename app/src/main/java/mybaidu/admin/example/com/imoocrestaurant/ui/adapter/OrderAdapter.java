@@ -69,14 +69,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderItemVie
             super(itemView);
 
             ivProduct = itemView.findViewById(R.id.iv_product);
-            tvRestaurantName = itemView.findViewById(R.id.tv_restaurant_name);
+            tvRestaurantName = itemView.findViewById(R.id.tv_product_name);
             tvLabel = itemView.findViewById(R.id.tv_label);
             tvPrice = itemView.findViewById(R.id.tv_price);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //TODO
+                    //TODO:进入订单详情页面
                 }
             });
         }

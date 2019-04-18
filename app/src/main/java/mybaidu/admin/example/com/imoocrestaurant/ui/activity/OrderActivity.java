@@ -62,6 +62,22 @@ public class OrderActivity extends BaseActivity {
                 toProductListActivity();
             }
         });
+
+        //下拉刷新订单
+        srlOrders.setOnRefreshListener(new SwipeRefresh.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadData();
+            }
+        });
+
+        //上拉显示更多
+        srlOrders.setOnPullUpRefreshListener(new SwipeRefreshLayout.OnPullUpRefreshListener() {
+            @Override
+            public void onPullUpRefresh() {
+                loadMore();
+            }
+        });
     }
 
     private void toProductListActivity() {
@@ -148,21 +164,6 @@ public class OrderActivity extends BaseActivity {
 
         srlOrders.setMode(SwipeRefresh.Mode.BOTH);
         srlOrders.setColorSchemeColors(Color.RED, Color.BLACK, Color.GREEN, Color.YELLOW);
-        //下拉刷新订单
-        srlOrders.setOnRefreshListener(new SwipeRefresh.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                loadData();
-            }
-        });
-
-        //上拉显示更多
-        srlOrders.setOnPullUpRefreshListener(new SwipeRefreshLayout.OnPullUpRefreshListener() {
-            @Override
-            public void onPullUpRefresh() {
-                loadMore();
-            }
-        });
 
         orderAdapter = new OrderAdapter(this, orderList);
         rvMyHistoryOrder.setLayoutManager(new LinearLayoutManager(this));
@@ -182,5 +183,11 @@ public class OrderActivity extends BaseActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        orderBiz.onDestroy();
     }
 }

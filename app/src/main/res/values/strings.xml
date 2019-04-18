@@ -27,7 +27,11 @@
     <string name="user_not_login">用户未登录</string>
     <string name="no_more_orders">没有订单了~~</string>
     <string name="load_orders_success">订单加载成功~</string>
-    <string name="count_0">数量：0</string>
+    <string name="count_0">数量：%1$d</string>
     <string name="pay_for_dinner">%1$.2f元 立即支付</string>
-    <string name="order">订单</string>
+    <string name="order">点餐</string>
+    <string name="single_product_price">%1$.2f元/份</string>
+    <string name="no_more_dish">没有更多的菜品了~~</string>
+    <string name="find_out_more_dishes">又找到%1$d菜品~~</string>
+    <string name="cancel_dish">已取消该菜品的订购了~~</string>
 </resources>

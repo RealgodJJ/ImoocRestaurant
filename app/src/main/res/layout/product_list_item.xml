@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="140dp"
     android:layout_marginStart="16dp"
-    android:background="@drawable/item_bg"
-    android:layout_marginEnd="16dp">
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/item_bg">
 
     <ImageView
         android:id="@+id/iv_product"
@@ -23,7 +23,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/iv_product"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
 
         <TextView
             android:id="@+id/tv_product_name"
@@ -52,7 +53,37 @@
         android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/iv_product"
         android:textColor="#FD8F50"
-        tools:text="@string/total_cost" />
+        tools:text="@string/total_cost"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/iv_sub"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/iv_product"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/sub"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_product"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@id/iv_sub"
+        android:textColor="#000000"
+        tools:text="2" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toStartOf="@id/tv_count"
+        android:src="@drawable/add"
+        android:layout_alignBottom="@id/iv_product"
+        tools:ignore="ContentDescription" />
 
     <View
         android:layout_width="match_parent"
