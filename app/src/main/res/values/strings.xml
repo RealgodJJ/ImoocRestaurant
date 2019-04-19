@@ -34,4 +34,6 @@
     <string name="no_more_dish">没有更多的菜品了~~</string>
     <string name="find_out_more_dishes">又找到%1$d菜品~~</string>
     <string name="cancel_dish">已取消该菜品的订购了~~</string>
+    <string name="not_choose_dish">未选择任何商品~~</string>
+    <string name="create_order_success">生成订单成功~~</string>
 </resources>

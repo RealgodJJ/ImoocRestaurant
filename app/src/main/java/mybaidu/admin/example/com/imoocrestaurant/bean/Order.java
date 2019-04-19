@@ -27,6 +27,24 @@ public class Order implements Serializable {
     public List<ProductVo> productVos = new ArrayList<>();
     public Map<Product, Integer> productQuantityMap = new HashMap<>();
 
+    public void addProduct(Product product) {
+        Integer count = productQuantityMap.get(product);
+        if (count == null || count == 0) {
+            productQuantityMap.put(product, 1);
+        } else {
+            productQuantityMap.put(product, count + 1);
+        }
+    }
+
+    public void subProduct(Product product) {
+        Integer count = productQuantityMap.get(product);
+        if (count == null || count == 0) {
+            return;
+        }
+        productQuantityMap.put(product, count - 1);
+
+    }
+
     public int getId() {
         return id;
     }
