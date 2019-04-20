@@ -15,6 +15,7 @@ import java.util.List;
 
 import mybaidu.admin.example.com.imoocrestaurant.R;
 import mybaidu.admin.example.com.imoocrestaurant.bean.Order;
+import mybaidu.admin.example.com.imoocrestaurant.ui.activity.OrderDetailActivity;
 import mybaidu.admin.example.com.imoocrestaurant.utils.Config;
 
 /**
@@ -76,7 +77,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderItemVie
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //TODO:进入订单详情页面
+                    //进入订单详情页面
+                    OrderDetailActivity.launch(context, orderList.get(getAdapterPosition()));
                 }
             });
         }

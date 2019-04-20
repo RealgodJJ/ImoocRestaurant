@@ -89,7 +89,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //TODO:进入商品详情页面
+                    //进入商品详情页面
                     ProductDetailActivity.launch(context, productItemList.get(getAdapterPosition()));
                 }
             });
