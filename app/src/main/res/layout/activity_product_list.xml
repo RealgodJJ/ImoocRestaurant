@@ -33,20 +33,20 @@
             android:layout_weight="6"
             android:background="#F3F5F7"
             android:gravity="center"
+            android:text="@string/count_0"
             android:textColor="#FB601B"
-            android:textSize="18sp"
-            android:text="@string/count_0" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt_pay_for_dinner"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="5"
             android:background="@drawable/btn_bg_orange"
             android:gravity="center"
+            android:text="@string/pay_for_dinner"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:text="@string/pay_for_dinner" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 

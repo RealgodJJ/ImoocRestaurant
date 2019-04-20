@@ -93,7 +93,7 @@ public class ProductListActivity extends BaseActivity {
         btPayForDinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO:跳转到支付界面
+                //生成订单
                 order.setCount(totalCount);
                 order.setPrice(totalPrice);
                 order.setRestaurant(productItemList.get(0).getRestaurant());

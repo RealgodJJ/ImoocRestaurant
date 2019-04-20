@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import mybaidu.admin.example.com.imoocrestaurant.R;
+import mybaidu.admin.example.com.imoocrestaurant.ui.activity.ProductDetailActivity;
 import mybaidu.admin.example.com.imoocrestaurant.utils.Config;
 import mybaidu.admin.example.com.imoocrestaurant.utils.Toasts;
 import mybaidu.admin.example.com.imoocrestaurant.vo.ProductItem;
@@ -89,6 +90,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 @Override
                 public void onClick(View v) {
                     //TODO:进入商品详情页面
+                    ProductDetailActivity.launch(context, productItemList.get(getAdapterPosition()));
                 }
             });
 

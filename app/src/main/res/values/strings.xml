@@ -36,4 +36,7 @@
     <string name="cancel_dish">已取消该菜品的订购了~~</string>
     <string name="not_choose_dish">未选择任何商品~~</string>
     <string name="create_order_success">生成订单成功~~</string>
+    <string name="red_meet">红烧肉</string>
+    <string name="dish_detail">菜品详情</string>
+    <string name="params_error">参数传递错误！</string>
 </resources>
